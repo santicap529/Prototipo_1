@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class ColisionScript : MonoBehaviour
 {
+    public int score;
+    public UIManager UIMgrScript;
+
+    void Awake()
+    {
+     UIMgrScript = GameObject.FindObjectOfType<UIManager>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,12 +23,9 @@ public class ColisionScript : MonoBehaviour
        if(other.gameObject.CompareTag("Colectable"))
        {
          Destroy(other.gameObject);
+         UIMgrScript.UpdateScore(score);
+       score ++;
        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
