@@ -7,20 +7,34 @@ public class UIManager : MonoBehaviour
 {
     public TextMeshProUGUI txtScore;
     public TextMeshProUGUI txtTiempo;
-    // Start is called before the first frame update
+
+    public GameObject Panel_Ganaste;
+    public GameObject Panel_gameover;
+
     void Start()
     {
-      UpdateScore(0);
+        Panel_Ganaste.SetActive(false);
+        Panel_gameover.SetActive(false);
+    }
+
+    void Update()
+    {
+        if (GameManager.Instance != null)
+            txtTiempo.text = GameManager.Instance.tiempoRestante.ToString("F2");
     }
 
     public void UpdateScore(int score)
     {
-      txtScore.text = score.ToString();
+        txtScore.text = score.ToString();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void MostrarPantallaWin()
     {
-      txtTiempo.text = Time.time.ToString("F2");  
+        Panel_Ganaste.SetActive(true);
+    }
+
+    public void MostrarPantallaGameOver()
+    {
+        Panel_gameover.SetActive(true);
     }
 }
