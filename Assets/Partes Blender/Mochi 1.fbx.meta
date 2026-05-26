@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: b3657684fcd00974dbd1c3a8f1181fb4
+guid: b8aaf389cafe86942b9da5a81485e8f3
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: metal
-    2100002: Marron
-    2100004: Marronmas
+    2100000: Marron
+    2100002: Metal
+    2100004: MASMarron
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cube
+    4300000: MASmarron
   externalObjects: {}
   materials:
     importMaterials: 1
