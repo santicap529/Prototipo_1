@@ -6,6 +6,7 @@ using TMPro;
 public class UIManager : MonoBehaviour
 {
     public TextMeshProUGUI txtScore;
+    public TextMeshProUGUI txtTiempo;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,6 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+      txtTiempo.text = Time.time.ToString("F2");  
     }
 }
