@@ -35,7 +35,6 @@ public class GameManager : MonoBehaviour
     {
         if (juegoTerminado)
         {
-            // Sistema de reinicio con R
             if (Input.GetKeyDown(KeyCode.R))
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             return;
